@@ -10,7 +10,7 @@
 - **Frontend:** Streamlit
 - **Backend:** Python, Scikit-learn
 - **Database:** MySQL
-- **Other Libraries:** Pandas, Numpy, NLTK (for text processing)
+- **Other Libraries:** Pandas, Numpy, TfidfVectorizer (for text processing)
 
 ## Steps to run the application
 
