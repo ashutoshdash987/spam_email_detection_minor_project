@@ -21,4 +21,4 @@
    ```bash
    streamlit run main.py
 
-3. The main.py script will serve the frontend using Streamlit and automatically use `db.py` to perform all database-related tasks.
+3. The `main.py` script will serve the frontend using Streamlit and automatically use `db.py` to perform all database-related tasks.
