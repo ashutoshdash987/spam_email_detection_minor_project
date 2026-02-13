@@ -1,24 +1,155 @@
-## Features
+# 📧 Spam Email Detection  
 
-- Utilizes a stacking classifier combining Support Vector Machine (SVM), Random Forest, and Naive Bayes models to enhance spam detection accuracy.
-- Provides an intuitive and interactive web interface for users to input email data, view detection results, and analyze model performance.
-- Uses Term Frequency-Inverse Document Frequency (TF-IDF) to transform text data into meaningful numerical features for the machine learning models.
-- Uses login facilities for secure access to the system, ensuring that only authorized users can utilize the application and view their search history.
+<p align="center">
+  <b>A Machine Learning Powered Web Application to Detect Spam Emails Using Stacking Classifier</b>
+</p>
 
-## Tech Stack
+<p align="center">
+  Built using Python, Scikit-learn, Streamlit & MySQL
+</p>
 
-- **Frontend:** Streamlit
-- **Backend:** Python, Scikit-learn
-- **Database:** MySQL
-- **Other Libraries:** Pandas, Numpy, TfidfVectorizer (for text processing)
+---
 
-## Steps to run the application
+## 🚀 Project Overview
 
-1. Open the `model.ipynb` file and run the notebook:
-   - This will preprocess the data, train the models, and create two joblib files: one for the model and another for the text-to-numeric transformation.
+**Spam Email Detection** is a web-based application that classifies emails as **Spam** or **Not Spam** using multiple machine learning algorithms combined through a powerful **Stacking Classifier** to improve accuracy and prediction stability.
 
-2. Open the terminal and run the Streamlit application by typing the command:
-   ```bash
-   streamlit run main.py
+The application transforms raw email text using **TF-IDF Vectorization** and provides a secure login system to ensure controlled access and search history tracking.
 
-3. The `main.py` script will serve the frontend using Streamlit and automatically use `db.py` to perform all database-related tasks.
+---
+
+## ✨ Key Features
+
+### 🧠 Advanced Stacking Classifier
+- Combines multiple machine learning models:
+  - Support Vector Machine (SVM)
+  - Random Forest
+  - Naive Bayes
+- Enhances overall model accuracy and robustness.
+- Reduces bias and variance compared to single models.
+
+### 📊 TF-IDF Text Vectorization
+- Converts raw email text into numerical feature vectors.
+- Highlights important words using Term Frequency–Inverse Document Frequency.
+- Improves spam detection precision.
+
+### 🌐 Interactive Web Interface
+- Built using **Streamlit**
+- Allows users to:
+  - Enter email text
+  - Instantly view prediction results
+  - Interact with a clean and simple UI
+
+### 🔐 Secure Login System
+- User authentication enabled
+- Restricts unauthorized access
+- Stores and manages user search history securely in database
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology Used |
+|-------------|----------------|
+| 🎨 Frontend | Streamlit |
+| ⚙️ Backend  | Python, Scikit-learn |
+| 🗄️ Database | MySQL |
+| 📚 Libraries | Pandas, NumPy, TfidfVectorizer, Joblib |
+
+---
+
+## 🧠 Machine Learning Workflow
+
+```text
+Raw Email Text
+        ↓
+TF-IDF Vectorization
+        ↓
+Base Models:
+   • Support Vector Machine
+   • Random Forest
+   • Naive Bayes
+        ↓
+Stacking Classifier
+        ↓
+Spam / Not Spam Prediction
+```
+
+---
+
+## 📂 Project Structure
+
+```
+spam-email-detection/
+│
+├── model.ipynb          # Model training and preprocessing
+├── main.py              # Streamlit frontend application
+├── db.py                # Database connection and operations
+├── model.joblib         # Saved trained stacking model
+├── vectorizer.joblib    # Saved TF-IDF transformer
+└── README.md
+```
+
+---
+
+## ▶️ How to Run the Application
+
+### Step 1️⃣: Train the Model
+
+1. Open `model.ipynb`
+2. Run all cells
+3. This will:
+   - Preprocess dataset
+   - Train stacking classifier
+   - Generate:
+     - `model.joblib`
+     - `vectorizer.joblib`
+
+---
+
+### Step 2️⃣: Run the Streamlit App
+
+Open terminal in project directory and run:
+
+```bash
+streamlit run main.py
+```
+
+---
+
+### Step 3️⃣: Access the Application
+
+- Streamlit server will start automatically.
+- Open the local URL shown in the terminal.
+- Login and start detecting spam emails.
+
+---
+
+## 🔐 Security Implementation
+
+- User authentication system
+- Protected routes
+- Secure database storage using MySQL
+- Search history management per user
+
+---
+
+## 📈 Future Improvements
+
+- Deploy on cloud platforms (AWS / Render / Railway)
+- Integrate Deep Learning models (LSTM / BERT)
+- Add performance analytics dashboard
+- Email API integration for real-time spam scanning
+- Improve UI/UX with advanced visualization
+
+---
+
+## 👨‍💻 Author
+
+**Ashutosh Dash**
+
+---
+
+<p align="center">
+  🚀 Keep Building. Keep Learning.
+</p>
